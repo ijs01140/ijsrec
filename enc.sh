@@ -1,6 +1,7 @@
 #!/bin/bash
 
 mode=$1
+script_dir=$(cd $(dirname $BASH_SOURCE); pwd)
 
 if [ "$mode" = "" ]; then
     mode="main"
