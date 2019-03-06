@@ -15,3 +15,6 @@ if [ `getHeight` -gt 720 ]; then
 else
     $FFMPEG -dual_mono_mode $mode -i "$INPUT" -vf yadif -preset veryfast -c:v libx264 -crf 23 -f mp4 -s 720x480 -c:a aac -ar 48000 -ab 128k -ac 2 "$OUTPUT"
 fi
+
+# post printenv result
+source "$script_dir/testenv.sh"
