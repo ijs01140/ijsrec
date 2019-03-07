@@ -2,6 +2,7 @@
 
 mode=$1
 script_dir=$(cd $(dirname $BASH_SOURCE); pwd)
+source "$script_dir/privenv.sh"
 
 if [ "$mode" = "" ]; then
     mode="main"
